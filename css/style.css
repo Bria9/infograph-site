@@ -1,0 +1,39 @@
+
+h1{
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#map{
+  width: 1000px;
+  height: 500px;
+  background-color: #f7f7f7;
+  border-radius: 1.5rem;
+  /* margin: 50px auto;
+  position: relative */
+
+}
+
+#tooltip {
+  text-align: center;
+  border: 1px solid #ccc;
+  position: absolute;
+  padding: 10px;
+  background-color: #fff;
+  display: none;
+}
+
+#tooltip .metric-date {
+  text-decoration: underline;
+}
+
+.axis{
+  font-size: 15px;
+  shape-rendering: geometricPrecision;
+}
