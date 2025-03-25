@@ -1,39 +1,143 @@
+body {
+  /* set background color */
+  /* background-color: #52bfd5; */
 
-h1{
+  background: linear-gradient(
+    180deg,
+    rgb(172, 216, 210) 41%,
+    rgb(216, 247, 243) 85%
+  );
+}
+.bgcBlue {
+  /* background-color: rgb(161, 202, 224); */
+  /* background-color: rgb(203, 233, 233); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+/* .bgImage{
+  background-image: url(/img/houseHorizon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+} */
+
+h1 {
+  /* color:aliceblue; */
+  /* text-shadow: 1px 1px black; */
+}
+h2 {
+  color: #2a2517;
+}
+.nav-underline {
+  background-color: #111110;
+
+  padding: 0.7rem;
+}
+
+.nav-underline ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 2rem;
+  padding: 0;
+}
+
+.nav-underline a {
+  text-decoration: none;
+  color: rgb(221, 223, 234);
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
-.container{
+#house-ctr {
+  width: 20rem;
+  height: 20rem;
+}
+
+#house {
+  width: 35rem;
+  height: 20rem;
+  z-index: 1;
+}
+
+#bigCloud {
+  margin-top: 3rem;
+  width: 100%;
+  height: 100px;
+  background-image: url("/img/bigCloud.svg");
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.animation {
+  width: 25rem;
+  height: 20rem;
+  /* background-color: aliceblue; */
+  border-radius: 2rem;
+}
+
+.cloudAnimate {
+  background-position-x: 0%;
+  animation-name: move, fade;
+  animation-duration: 13s, 15s;
+  animation-delay: 0s, 2s;
+  animation-timing-function: ease-in, ease-out;
+  animation-iteration-count: infinite, infinite;
+}
+
+#smallCloud {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 10rem;
+  background-image: url("/img/bigCloud.svg");
+  z-index: 1;
+  top: 13rem;
+  position: absolute;
+}
+
+@keyframes move {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+@keyframes fade {
+  50% {
+    opacity: 0;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.chartCtr {
+  width: 23rem;
+  height: 40rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 }
 
-#map{
-  width: 1000px;
-  height: 500px;
-  background-color: #f7f7f7;
+#chart {
+  padding: 1rem;
+  margin: 1.5rem auto;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 1.5rem;
-  /* margin: 50px auto;
-  position: relative */
-
-}
-
-#tooltip {
-  text-align: center;
-  border: 1px solid #ccc;
-  position: absolute;
-  padding: 10px;
-  background-color: #fff;
-  display: none;
-}
-
-#tooltip .metric-date {
-  text-decoration: underline;
-}
-
-.axis{
-  font-size: 15px;
-  shape-rendering: geometricPrecision;
+  position: relative;
 }
