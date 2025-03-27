@@ -11,6 +11,7 @@ body {
 .bgcBlue {
   /* background-color: rgb(161, 202, 224); */
   /* background-color: rgb(203, 233, 233); */
+  background-image: url("/img/landscape.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -31,6 +32,11 @@ h1 {
 h2 {
   color: #2a2517;
 }
+
+.nav-container{
+padding: 2rem;
+}
+
 .nav-underline {
   background-color: #111110;
 
@@ -66,8 +72,12 @@ h2 {
 
 #house {
   width: 35rem;
-  height: 20rem;
+  height: 35rem;
   z-index: 1;
+  position: relative;
+  top: -100px;
+  left: 40px;
+  transform: rotate(1.8deg)
 }
 
 #bigCloud {
@@ -137,7 +147,24 @@ h1 {
   margin: 1.5rem auto;
   width: 24rem;
   height: 24rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255);
   border-radius: 1.5rem;
   position: relative;
+}
+
+#tooltip{
+  position: absolute;
+  opacity: 0;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  pointer-events: none;
+ 
+}
+
+.bar-labels{
+  text-anchor: middle;
+  font-size: 1rem;
 }

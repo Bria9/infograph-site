@@ -12,7 +12,7 @@ async function renderChart() {
   // Group data by year and count foreclosures
   const foreclosureCounts = d3.rollup(
     dataset,
-    v => v.length,  // Count the number of records per year
+    d => d.length,  // Count the number of records per year
     d => d.Sale_Date.getFullYear()
   );
 
@@ -56,7 +56,7 @@ const x = d3.scaleBand()
   .padding(0.2);
   container.append("g")
   .attr("transform", `translate(0, ${dimensions.containerHeight})`)
-  .call(d3.axisBottom(x))
+  .call(d3.axisBottom(x)) // draw axis 
   .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end");
@@ -82,7 +82,7 @@ const y = d3.scaleLinear()
   .attr("transform", "translate(-55, 180)rotate(-90)")
   .attr("x", 50 )  // Center label
   .attr("y", 20 )  
-  .text("# of Foreclosures");  // Label text
+  .text("# of Foreclosures");  // Label 
   
 //draw bars
 container.selectAll("rect")
@@ -93,6 +93,65 @@ container.selectAll("rect")
 .attr("width", x.bandwidth())
 .attr("height", function(d) { return dimensions.containerHeight - y(d.count); })
 .attr("fill", "#69b3a2")
+.on("mouseover", mouseover)
+.on("mousemove", mousemove)
+.on("mouseleave", mouseleave)
+
+
+
+// count labels 
+container.append("g")
+.classed("bar-labels", true)
+.selectAll("text")
+.data(data)
+.join("text")
+.attr("y", (d) => y(d.count) + 20)
+.attr("x", (d) => x(d.year) + 10)
+.attr("text-anchor", "middle")
+.text((d) => d.count )
+.style("font-size", "12px")
+.style("fill", "#fff");
+
+const tooltip = d3.select("#tooltip");
+
+// mouseover event
+function mouseover(event, d) {
+  tooltip
+    .style("opacity", 1)  // Make tooltip visible
+    .html(`Year: ${d.year}<br> Foreclosures: ${d.count}`);  // Tooltip content
+  d3.select("rect")
+    .transition()
+    .duration(100)
+    .style("fill", "#69b3a2")
+    d3.select(this)
+      .transition()
+      .duration(200)
+      .style("fill", "#1e4a40")
+      .style("stroke", "pink")
+}
+
+//  mousemove event
+function mousemove(event, d) {
+  tooltip
+    .style("left", event.pageX + 10 + "px")  // Position tooltip near cursor
+    .style("top", event.pageY - 20 + "px");
+}
+
+// mouseleave event
+function mouseleave(event, d) {
+  tooltip.style("opacity", 0);  // Hide tooltip
+  d3.selectAll("rect")
+  .transition()
+  .duration(100)
+  .style("fill", "#69b3a2")
+d3.select(this)
+  .transition()
+  .duration(200)
+  .style("stroke", "none")
+  ,style("stroke-width", 0)
+}
+
+
 
 }
 
