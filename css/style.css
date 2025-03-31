@@ -1,6 +1,4 @@
 body {
-  /* set background color */
-  /* background-color: #52bfd5; */
 
   background: linear-gradient(
     180deg,
@@ -9,28 +7,21 @@ body {
   );
 }
 .bgcBlue {
-  /* background-color: rgb(161, 202, 224); */
-  /* background-color: rgb(203, 233, 233); */
   background-image: url("/img/landscape.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
 }
-/* .bgImage{
-  background-image: url(/img/houseHorizon.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-} */
 
 h1 {
-  /* color:aliceblue; */
-  /* text-shadow: 1px 1px black; */
+  text-align: center;
 }
 h2 {
   color: #2a2517;
+}
+h4{
+  padding:.5rem 0;
 }
 
 .nav-container{
@@ -92,7 +83,6 @@ padding: 2rem;
 .animation {
   width: 25rem;
   height: 20rem;
-  /* background-color: aliceblue; */
   border-radius: 2rem;
 }
 
@@ -129,9 +119,9 @@ padding: 2rem;
   }
 }
 
-h1 {
-  text-align: center;
-}
+
+
+/* Bar Chart */
 
 .chartCtr {
   width: 23rem;
@@ -168,3 +158,27 @@ h1 {
   text-anchor: middle;
   font-size: 1rem;
 }
+
+/* Map Styling */
+
+
+#map {
+  margin: 1rem auto;
+    height: 26rem;
+    width: 95%;
+    border: .5rem solid #111110;
+    border-radius: .3rem;
+}
+.info {
+    padding: .5rem .6rem;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: .6rem;
+    
+}
+.legend {
+    line-height: .5rem;
+    color: #111111;
+    padding: .2rem 1rem;
+}
+
