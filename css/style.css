@@ -5,9 +5,9 @@ body {
     rgb(172, 216, 210) 41%,
     rgb(216, 247, 243) 85%
   );
+  
 }
 .bgcBlue {
-  background-image: url("/img/landscape.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -25,7 +25,7 @@ h4{
 }
 
 .nav-container{
-padding: 2rem;
+width: 100%;
 }
 
 .nav-underline {
@@ -46,7 +46,7 @@ padding: 2rem;
   text-decoration: none;
   color: rgb(221, 223, 234);
   padding: 1rem 2rem;
-  position: relative;
+  /* position: relative; */
 }
 
 .container {
@@ -182,3 +182,54 @@ padding: 2rem;
     padding: .2rem 1rem;
 }
 
+#map-info{
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border: 1rem solid #ccc;
+  width: 95%;
+  display: none;
+ 
+}
+
+#bar-info{
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border: 1rem solid #ccc;
+  width: 95%;
+  display: none;
+ 
+}
+
+#main-info{
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border: 1rem solid #ccc;
+  width: 95%;
+  display: none;
+ 
+}
+
+
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn{
+ padding: .5rem .5rem;
+ background-color: #010000;
+ border-style: none;
+ border-radius: .3rem;
+ color: white;
+ cursor: pointer;
+ z-index: 1;
+}
+
+.btn:hover {
+  background-color: #45a049;
+
+}

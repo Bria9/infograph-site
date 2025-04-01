@@ -138,3 +138,18 @@ info.update = function (props) {
         : 'Hover over a neighborhood');
     };
 
+    //map button info
+
+    const mapBtnEl = document.getElementById("mapBtn")
+    const mapInfoEl = document.getElementById("map-info")
+
+
+    mapBtnEl.addEventListener("click", function (){
+        console.log("Before click, visibility:", getComputedStyle(mapInfoEl).display);
+        if(mapInfoEl.style.display === "none"){
+    mapInfoEl.style.display = "inline-block";
+    mapInfoCtnEl.style.display = ""
+        }
+        else{ mapInfoEl.style.display = "none"}
+    })
+    

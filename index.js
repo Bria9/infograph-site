@@ -82,7 +82,7 @@ const y = d3.scaleLinear()
   .attr("transform", "translate(-55, 180)rotate(-90)")
   .attr("x", 50 )  // Center label
   .attr("y", 20 )  
-  .text("# of Foreclosures");  // Label 
+  .text("Number of Foreclosures");  // Label 
   
 //draw bars
 container.selectAll("rect")
@@ -156,3 +156,33 @@ d3.select(this)
 }
 
 renderChart();
+
+    //bar button info
+
+    const barBtnEl = document.getElementById("barBtn")
+    const barInfoEl = document.getElementById("bar-info")
+
+
+    barBtnEl.addEventListener("click", function (){
+        if(barInfoEl.style.display === "none"){
+    barInfoEl.style.display = "inline-block";
+   
+        }
+        else{ barInfoEl.style.display = "none"}
+    })
+  
+
+    // main button info
+
+    const mainBtnEl = document.getElementById("mainBtn")
+    const mainInfoEl = document.getElementById("main-info")
+
+
+    mainBtnEl.addEventListener("click", function (){
+        console.log("Before click, visibility:", getComputedStyle(mainInfoEl).display);
+        if(mainInfoEl.style.display === "none"){
+    mainInfoEl.style.display = "inline-block";
+   
+        }
+        else{ mainInfoEl.style.display = "none"}
+    })
