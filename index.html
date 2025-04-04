@@ -7,21 +7,24 @@
   <title>Foreclosure Landscape</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
- <main class="bgImage bgcBlue container">
-   
-   <div class="text-ctr">
-   <h1>Louisville Metro Foreclosure Landscape</h1>
-   <h2>Insight into Foreclosure Trends in Louisville Metro Area </h2>
-  <div class="animation">
-   <div class="cloudAnimate"  id="bigCloud"></div>
-   <div class="cloudAnimate" id="smallCloud"></div>
-   <div class="container" id="house-ctr">
-   <img src="img/House.svg" id ="house">
-  </div>
-   
+  <div id="overlay"></div>
+  <main class="bgImage">
+    <div class="text-ctr flex">
+      <h1>Louisville Metro Foreclosure Landscape</h1>
+      <h2>Insight into Foreclosure Trends in Louisville Metro Area </h2>
+    </div>
+    <div>
+      <div class="cloudAnimate"  id="bigCloud"></div>
+      <div class="cloudAnimate" id="smallCloud"></div>
+      <div class="container" id="house-ctr">
+        <img src="img/House.svg" id ="house">
+      </div>
+      
+     
   <div class="flex" > 
     <button class="btn" id="mainBtn">Foreclosure Information</button>
     
@@ -34,19 +37,18 @@
       </p>
   
     </div>
-    </div>
-
+  </div>
+</main> 
   <div class="nav-container">
-    <nav class="nav-underline">
+    <nav class="nav">
       <ul>
         <li><a href="barChart.html">Bar Chart</a></li>
         <li> <a href="map.html">Map</a></li>
       </ul>
     </nav>
+
+
 </div> 
-  </main>
- 
-  
 
 <script src="main.js"></script>
 </body>
