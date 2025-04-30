@@ -38,6 +38,7 @@ h2 {
   color: rgb(1, 0, 0);
   font-size: 1.2rem;
 }
+
 .sub-heading{
  color: #fefefe;
 }
@@ -48,8 +49,6 @@ h2 {
   background-color: rgb(243, 213, 66);
   top: 29%;
   left: 40%;
-  
-
 }
 
 #board{
@@ -100,9 +99,10 @@ h2 {
   text-decoration: none;
   color: rgb(240, 248, 255);
   display: block;
-
+  font-weight: 600;
   width: 100%;
 }
+
 .nav li:hover {
   background-color: #303033;
   padding: 0.4rem 4rem;
