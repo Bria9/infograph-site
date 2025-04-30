@@ -35,7 +35,7 @@ h4 {
   padding-bottom: 0.45rem;
 }
 h2 {
-  color: #fefefe;
+  color: rgb(1, 0, 0);
   font-size: 1.2rem;
 }
 
@@ -67,7 +67,7 @@ h2 {
 
 
 #map-h2 {
-  color: #010000;
+  color: rgb(1, 0, 0);
 }
 
 .nav-container {
@@ -203,7 +203,7 @@ h2 {
   width: 90%;
   background-color: rgba(255, 255, 255);
   border-radius: 1.5rem;
-  border: 0.12rem solid #010000;
+  border: 0.12rem solid rgb(1, 0, 0);
 }
 
 #tooltip {
