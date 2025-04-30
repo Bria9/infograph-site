@@ -80,6 +80,7 @@ h2 {
   background-color: rgb(25, 23, 23);
   width: 100%;
   padding: 1.25rem;
+  margin-top: 7rem;
 }
 
 .nav ul {
@@ -229,6 +230,7 @@ h2 {
 
 #map {
   margin: 1rem auto;
+  margin-top: 5rem;
   height: 26rem;
   width: 95%;
   border: 0.12rem solid #111110;
